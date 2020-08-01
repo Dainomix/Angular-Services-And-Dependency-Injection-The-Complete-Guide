@@ -6,7 +6,7 @@ import { AccountsService } from '../accounts.service';
   selector: 'app-new-account',
   templateUrl: './new-account.component.html',
   styleUrls: ['./new-account.component.css'],
-  providers: [LoggingService],  // Provides simply means we tell Angular how to create the it (LoggingService).
+  //providers: [LoggingService],  // Provides simply means we tell Angular how to create the it (LoggingService).
 })
 export class NewAccountComponent {
   constructor(private loggingService:LoggingService,
@@ -14,7 +14,7 @@ export class NewAccountComponent {
 
   onCreateAccount(accountName: string, accountStatus: string) {
     this.accountsService.addAccount(accountName, accountStatus);
-    this.loggingService.logStatusChange(accountStatus);
+    // this.loggingService.logStatusChange(accountStatus);
   }
 
   /**
